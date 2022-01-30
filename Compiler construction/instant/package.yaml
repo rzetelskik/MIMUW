@@ -1,0 +1,37 @@
+name: instant-compiler
+version: 0.0.1
+author: Kacper Rzetelski
+
+dependencies:
+  - array
+  - base
+  - containers
+
+library:
+  source-dirs:
+    - src/grammar
+  exposed-modules:
+    - Instant.Abs
+    - Instant.Par
+
+executables:
+  insc_jvm:
+    main: Main.hs
+    source-dirs:  
+      - src/jvm
+    dependencies:
+      - instant-compiler
+      - mtl
+      - process
+      - filepath
+      - lens
+  insc_llvm:
+    main: Main.hs
+    source-dirs:
+      - src/llvm
+    dependencies:
+      - instant-compiler
+      - mtl
+      - process
+      - filepath
+      - lens

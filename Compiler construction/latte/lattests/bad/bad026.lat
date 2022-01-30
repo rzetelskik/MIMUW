@@ -1,0 +1,7 @@
+// Assigning string to int variable.
+
+int main () {
+ int x;
+  x = "foo"+"bar";
+ return 0 ;
+}

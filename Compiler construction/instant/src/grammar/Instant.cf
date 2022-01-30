@@ -1,0 +1,12 @@
+Prog. Program ::= [Stmt] ;
+SAss. Stmt ::= Ident "=" Exp;
+SExp. Stmt ::= Exp ;
+separator Stmt ";" ;
+
+ExpAdd.            Exp1   ::= Exp2 "+"  Exp1 ;
+ExpSub.            Exp2   ::= Exp2 "-"  Exp3 ;
+ExpMul.            Exp3   ::= Exp3 "*"  Exp4 ;
+ExpDiv.            Exp3   ::= Exp3 "/"  Exp4 ;
+ExpLit.            Exp4   ::= Integer ;
+ExpVar.            Exp4   ::= Ident ;
+coercions Exp 4;

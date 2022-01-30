@@ -1,0 +1,11 @@
+/* test input */
+
+int main() {
+  int x = readInt();
+  string y = readString();
+  string z = readString();
+
+  printInt(x-5);
+  printString(y+z);  
+  return 0 ;
+}

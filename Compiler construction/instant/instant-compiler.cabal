@@ -1,0 +1,63 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.2.
+--
+-- see: https://github.com/sol/hpack
+
+name:           instant-compiler
+version:        0.0.1
+author:         Kacper Rzetelski
+maintainer:     Kacper Rzetelski
+build-type:     Simple
+
+library
+  exposed-modules:
+      Instant.Abs
+      Instant.Par
+  other-modules:
+      Instant.ErrM
+      Instant.Lex
+      Instant.Print
+      Instant.Skel
+      Paths_instant_compiler
+  hs-source-dirs:
+      src/grammar
+  build-depends:
+      array
+    , base
+    , containers
+  default-language: Haskell2010
+
+executable insc_jvm
+  main-is: Main.hs
+  other-modules:
+      Paths_instant_compiler
+  hs-source-dirs:
+      src/jvm
+  build-depends:
+      array
+    , base
+    , containers
+    , filepath
+    , instant-compiler
+    , lens
+    , mtl
+    , process
+  default-language: Haskell2010
+
+executable insc_llvm
+  main-is: Main.hs
+  other-modules:
+      Paths_instant_compiler
+  hs-source-dirs:
+      src/llvm
+  build-depends:
+      array
+    , base
+    , containers
+    , filepath
+    , instant-compiler
+    , lens
+    , mtl
+    , process
+  default-language: Haskell2010

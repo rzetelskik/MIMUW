@@ -1,0 +1,30 @@
+name: latte-compiler
+version: 0.0.1
+author: Kacper Rzetelski
+
+dependencies:
+  - array
+  - base
+  - containers
+
+library:
+  source-dirs:
+    - src/grammar
+  exposed-modules:
+    - Latte.Abs
+    - Latte.Par
+
+executables:
+  latc_llvm:
+    main: Main.hs
+    source-dirs:
+      - src
+    dependencies:
+      - latte-compiler
+      - mtl
+      - process
+      - lens
+      - filepath
+      - text
+      - keys
+

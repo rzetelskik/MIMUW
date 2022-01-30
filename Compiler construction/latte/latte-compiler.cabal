@@ -1,0 +1,67 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.2.
+--
+-- see: https://github.com/sol/hpack
+
+name:           latte-compiler
+version:        0.0.1
+author:         Kacper Rzetelski
+maintainer:     Kacper Rzetelski
+build-type:     Simple
+
+library
+  exposed-modules:
+      Latte.Abs
+      Latte.Par
+  other-modules:
+      Latte.ErrM
+      Latte.Lex
+      Latte.Print
+      Latte.Skel
+      Paths_latte_compiler
+  hs-source-dirs:
+      src/grammar
+  build-depends:
+      array
+    , base
+    , containers
+  default-language: Haskell2010
+
+executable latc_llvm
+  main-is: Main.hs
+  other-modules:
+      Backend.Environment
+      Backend.EnvironmentUtils
+      Backend.IR
+      Backend.IRGeneration
+      Backend.IRUtils
+      Backend.LLVM
+      Backend.Monad
+      Backend.Opt.CSE
+      Backend.Opt.Mem2Reg
+      Backend.Opt.Run
+      Backend.Opt.TrivialPhis
+      Backend.Run
+      Frontend.Environment
+      Frontend.EnvironmentUtils
+      Frontend.Exception
+      Frontend.Monad
+      Frontend.Run
+      Frontend.SemanticAnalysis
+      Frontend.TypeUtils
+      Paths_latte_compiler
+  hs-source-dirs:
+      src
+  build-depends:
+      array
+    , base
+    , containers
+    , filepath
+    , keys
+    , latte-compiler
+    , lens
+    , mtl
+    , process
+    , text
+  default-language: Haskell2010

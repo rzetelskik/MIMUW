@@ -1,0 +1,5 @@
+int main() {
+      string x ;
+      x = "pi" + 1 ;
+      return 0 ;
+}

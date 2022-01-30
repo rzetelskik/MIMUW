@@ -1,0 +1,6 @@
+// passing integers to printString().
+
+int main() {
+	printString(1);
+	return 0 ;
+}

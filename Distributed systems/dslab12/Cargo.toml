@@ -1,0 +1,21 @@
+[package]
+name = "lab-12"
+version = "0.2.0"
+authors = ["Mateusz Banaszek <m.banaszek@mimuw.edu.pl"]
+edition = "2018"
+
+[dependencies]
+uuid = { version = "0.8", features = ["v4"] }
+log = "0.4"
+env_logger = "0.9"
+async-channel = "1.6"
+async-trait = "0.1"
+tokio = {version = "1.15", features = ["full"] }
+executor = { path = "../../dsassignment1/solution/", package = "assignment-1-solution" }
+
+[dev-dependencies]
+ntest = "0.7"
+
+[[bin]]
+name = "lab12"
+path = "main.rs"

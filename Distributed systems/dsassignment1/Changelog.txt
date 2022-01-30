@@ -1,0 +1,5 @@
+Changes:
+
+* November 2nd, 2021
+Fix a race condition in the public test.
+Related to https://moodle.mimuw.edu.pl/mod/forum/discuss.php?d=6374.

@@ -1,0 +1,22 @@
+[package]
+name = "assignment-2-public-tests"
+version = "0.2.0"
+authors = ["Filip Plata <fp371335@students.mimuw.edu.pl>", "Wojciech Ciszewski <w.ciszewski2@student.uw.edu.pl>"]
+edition = "2018"
+
+[dev-dependencies]
+tokio = {version = "1.13", features = ["full"] }
+ntest = "0.7"
+tempfile = "3.2"
+env_logger = "0.9"
+log = "0.4"
+assignment-2-solution = { path = "../solution" }
+assignment-2-test-utils = { path = "../test-utils" }
+uuid = { version = "0.8", features = ["v4"] }
+hmac = "0.11"
+sha2 = "0.9"
+async-trait = "0.1"
+async-channel = "1.6"
+futures = "0.3"
+rand = "0.8"
+serial_test = "0.5"

@@ -1,0 +1,13 @@
+[package]
+name = "lab-02"
+version = "0.2.0"
+authors = ["Filip Plata <fp371335@students.mimuw.edu.pl>", "Mateusz Banaszek <m.banaszek@mimuw.edu.pl"]
+edition = "2018"
+
+[dev-dependencies]
+crossbeam-channel = "0.5"
+ntest = "0.7"
+
+[[bin]]
+name = "lab02"
+path = "main.rs"

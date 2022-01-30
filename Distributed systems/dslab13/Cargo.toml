@@ -1,0 +1,20 @@
+[package]
+name = "lab-13"
+version = "0.2.0"
+authors = ["Konrad Iwanicki <iwanicki@mimuw.edu.pl>"]
+edition = "2018"
+
+[dependencies]
+log = "0.4"
+env_logger = "0.9"
+async-channel = "1.6"
+async-trait = "0.1"
+tokio = { version = "1.15", features = ["full"] }
+executor = { path = "../../dsassignment1/solution", package = "assignment-1-solution" }
+
+[dev-dependencies]
+ntest = "0.7"
+
+[[bin]]
+name = "lab13"
+path = "main.rs"

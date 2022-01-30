@@ -1,0 +1,12 @@
+[package]
+name = "lab-01"
+version = "0.2.0"
+authors = ["Filip Plata <fp371335@students.mimuw.edu.pl>", "Mateusz Banaszek <m.banaszek@mimuw.edu.pl"]
+edition = "2018"
+
+[dev-dependencies]
+ntest = "0.7"
+
+[[bin]]
+name = "lab01"
+path = "main.rs"

@@ -1,3 +1,24 @@
 [submodule "Software engineering/ad_hoc"]
 	path = Software engineering/ad_hoc
 	url = https://github.com/rzetelskik/ad_hoc/
+[submodule "Languages and Tools for Programming I (C++)/images"]
+	path = Languages and Tools for Programming I (C++)/images
+	url = https://github.com/rzetelskik/images
+[submodule "Languages and Tools for Programming I (C++)/playlist"]
+	path = Languages and Tools for Programming I (C++)/playlist
+	url = https://github.com/rzetelskik/playlist
+[submodule "Languages and Tools for Programming I (C++)/insertion-ordered-map"]
+	path = Languages and Tools for Programming I (C++)/insertion-ordered-map
+	url = https://github.com/rzetelskik/insertion-ordered-map
+[submodule "Languages and Tools for Programming I (C++)/fibin"]
+	path = Languages and Tools for Programming I (C++)/fibin
+	url = https://github.com/rzetelskik/fibin
+[submodule "Languages and Tools for Programming I (C++)/fibo"]
+	path = Languages and Tools for Programming I (C++)/fibo
+	url = https://github.com/rzetelskik/fibo
+[submodule "Languages and Tools for Programming I (C++)/poset"]
+	path = Languages and Tools for Programming I (C++)/poset
+	url = https://github.com/rzetelskik/poset
+[submodule "Languages and Tools for Programming I (C++)/tickets"]
+	path = Languages and Tools for Programming I (C++)/tickets
+	url = https://github.com/rzetelskik/tickets

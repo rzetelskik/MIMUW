@@ -1,0 +1,58 @@
+#!/usr/bin/python3
+from urllib.parse import urlparse
+import sys
+import subprocess
+
+executable = './testhttp_raw'
+local = None
+stunnel = None
+
+
+def print_usage():
+    print("Usage: {} <cookies file> <test http address>".format(sys.argv[0]))
+    exit(1)
+
+
+def get_free_port():
+    import socket
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.bind(("", 0))
+    s.listen(1)
+    port = s.getsockname()[1]
+    s.close()
+    return str(port)
+
+
+if len(sys.argv) < 3:
+    print_usage()
+
+cookie_file, url = sys.argv[-2:]
+
+parsed_url = urlparse(url)
+secure = (parsed_url.scheme == "https")
+conn_address = parsed_url.hostname + ":" + str(parsed_url.port if parsed_url.port else 443 if secure else 80)
+
+if secure:
+    local = "127.0.0.1:" + get_free_port()
+    config = """pid=
+    foreground = yes
+    [service]
+    client = yes
+    accept = {}
+    connect = {}
+    """.format(local, conn_address)
+
+    stunnel = subprocess.Popen(["stunnel", "-fd", "0"], stdin=subprocess.PIPE, stdout=subprocess.PIPE,
+                               stderr=subprocess.STDOUT)
+    stunnel.stdin.write(config.encode('utf-8'))
+    stunnel.stdin.close()
+    while True:
+        line = stunnel.stdout.readline()
+        if "Configuration successful" in str(line):
+            break
+    stunnel.stdout.close()
+
+subprocess.run([executable, local if secure else conn_address, cookie_file, url])
+
+if secure:
+    stunnel.terminate()

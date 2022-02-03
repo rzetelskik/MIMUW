@@ -1,0 +1,8 @@
+/**
+@mainpage Routes project documentation.
+
+### Description of the program
+
+This program performs basic operations on maps of routes and roads using Dijkstra's shortest path finding algorithm.
+
+*/

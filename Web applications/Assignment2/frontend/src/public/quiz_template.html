@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quizzer</title>
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
+    <link type="text/css" rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="container is-clipped">
+      <section class="hero is-dark">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">
+              Quizzer
+            </h1>
+            <h2 class="subtitle">
+              An application with, well, a quiz
+            </h2>
+          </div>
+        </div>
+      </section>
+      <section class="box">
+        <article id="introduction" class="message is-light">
+          <div class="message-header">
+            Introduction
+            <button class="delete"></button>
+          </div>
+          <div class="message-body"></div>
+        </article>
+        <div class="level is-mobile">
+          <a href="quiz.html"><button class="level-left button is-danger">Quit without saving</button></a>
+          <p id="timer" class="level-right is-size-4">00:00:00</p>
+        </div>
+        <progress id="progress-bar" class="progress" value="" max=""></progress>
+        <section id="question-panel" class="panel">
+          <div class="panel-heading level is-mobile">
+            <p class="is-size-4 level-left inline">
+              Question
+              <span id="question-number"></span>
+            </p>
+            <p class="is-size-5 level-right inline">
+              Penalty:
+              <span id="penalty-value"></span>
+            </p>
+          </div>
+          <div class="panel-block">
+            <p class="is-size-3 inline"><span id="question-body"></span> = ?</p>
+          </div>
+          <div class="panel-block">
+            <input class="input is-light" type="text" id="user-answer" pattern="^-?\d+$" />
+          </div>
+        </section>
+        <div class="level is-mobile">
+          <button id="button-prev" class="level-left button is-light">Previous</button>
+          <button id="button-finish" class="button is-danger">Finish</button>
+          <button id="button-next" class="level-right button is-light">Next</button>
+        </div>
+      </section>
+      <div id="popup" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+          <header class="modal-card-head">
+            <p class="modal-card-title">Quiz completed!</p>
+          </header>
+          <section class="modal-card-body">
+            <table class="container table is-fullwidth">
+              <thead>
+                <tr>
+                  <th>Question No.</th>
+                  <th>Time</th>
+                  <th>Penalty</th>
+                </tr>
+              </thead>
+              <tbody id="results-body"></tbody>
+            </table>
+            <div class="level is-mobile">
+              <p class="inline level-item">Score: <span id="score"></span></p>
+              <p class="inline level-item">Total time: <span id="total-time"></span></p>
+              <p class="inline level-item">Total penalty: <span id="total-penalty"></span></p>
+            </div>
+          </section>
+          <footer class="modal-card-foot">
+            <a href="quiz.html"><button class="button is-link" id="back-to-menu">Back to main menu</button></a>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="js/quiz_template.js"></script>
+  </body>
+</html>

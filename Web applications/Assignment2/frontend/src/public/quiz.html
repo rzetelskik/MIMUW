@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quizzer</title>
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
+    <link type="text/css" rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="hero is-dark">
+        <div class="hero-body">
+          <div class="container">
+            <a href="quiz.html">
+              <h1 class="title">
+                Quizzer
+              </h1>
+              <h2 class="subtitle">
+                An application with, well, a quiz
+              </h2>
+            </a>
+          </div>
+        </div>
+      </section>
+      <nav class="navbar is-light">
+        <div class="navbar-menu is-active">
+          <div class="navbar-start">
+            <div class="navbar-item">
+              <div class="field is-grouped">
+                <button class="button is-success" id="login-button">Log in</button>
+                <button class="button is-danger is-hidden" id="logout-button">Log out</button>
+              </div>
+            </div>
+            <div class="navbar-item">
+              <button class="button is-link is-hidden" id="password-button">Change password</button>
+            </div>
+            <div class="navbar-item">
+              <button class="button is-link is-hidden" id="add-quiz-button">Add a quiz</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="modal" id="login-modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+          <div class="box">
+            <div class="field">
+              <label class="label">Username</label>
+              <div class="control">
+                <input type="text" class="input" id="input-username" />
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Password</label>
+              <div class="control">
+                <input type="password" class="input" id="input-password" />
+              </div>
+            </div>
+            <div class="field is-grouped">
+              <div class="control">
+                <button class="button is-success" id="login-confirm">Login</button>
+              </div>
+              <div class="control">
+                <button class="button is-light" id="login-cancel">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="password-modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+          <div class="box">
+            <div class="field">
+              <label class="label">Password</label>
+              <div class="control">
+                <input type="password" class="input" id="change-password" />
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">New password</label>
+              <div class="control">
+                <input type="password" class="input" id="change-password-new" />
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Repeat new password</label>
+              <div class="control">
+                <input type="password" class="input" id="change-password-new-repeat" />
+              </div>
+            </div>
+            <div class="field is-grouped">
+              <div class="control">
+                <button class="button is-success" id="change-password-confirm">Confirm</button>
+              </div>
+              <div class="control">
+                <button class="button is-light" id="change-password-cancel">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="add-quiz-modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+          <div class="box">
+            <div class="field">
+              <label class="label">Quiz JSON</label>
+              <div class="control">
+                <input type="text" class="input" id="input-quiz-json" />
+              </div>
+            </div>
+            <div class="field is-grouped">
+              <div class="control">
+                <button class="button is-success" id="add-quiz-confirm">Upload</button>
+              </div>
+              <div class="control">
+                <button class="button is-light" id="add-quiz-cancel">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="box py-6" id="guest-box">
+        <p class="title is-4 py-3">Welcome to Quizzer!</p>
+        <p class="subtitle is-6">Log in to see your stats and quizes waiting to be solved!</p>
+      </section>
+      <section class="box is-hidden" id="quiz-box">
+        <p class="title is-4">Quizes!</p>
+        <p class="subtitle is-6">There are quizes waiting to be solved!</p>
+        <div class="container">
+          <table class="table is-fullwidth is-responsive">
+            <thead>
+              <tr>
+                <th>Quiz ID</th>
+                <th>Introduction</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="quiz-list"></tbody>
+          </table>
+        </div>
+      </section>
+      <section class="box is-hidden" id="stats-box">
+        <p class="title is-4">Statistics</p>
+        <p class="subtitle is-6">Your results summed up</p>
+        <div class="container">
+          <table class="table is-fullwidth is-responsive">
+            <thead>
+              <tr>
+                <th>Quiz ID</th>
+                <th>Score</th>
+                <th>Time</th>
+                <th>Penalty</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="stats-list"></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+    <script type="module" src="js/quiz.js"></script>
+  </body>
+</html>

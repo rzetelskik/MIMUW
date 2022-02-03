@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quizzer</title>
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
+    <link type="text/css" rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="hero is-dark">
+        <div class="hero-body">
+          <div class="container">
+            <a href="quiz.html">
+              <h1 class="title">
+                Quizzer
+              </h1>
+              <h2 class="subtitle">
+                An application with, well, a quiz
+              </h2>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="box">
+        <p class="title is-4"><span>Detailed stats for quiz #</span><span id="title-quiz-id"></span></p>
+        <p class="subtitle is-6">
+          <span>Analyse your results, </span><span class="has-text-weight-semibold" id="title-username"></span
+          ><span>!</span>
+        </p>
+      </section>
+      <section class="box">
+        <p class="title is-4">Your answers</p>
+        <p class="subtitle is-6">Take a look at how you did!</p>
+        <div class="container">
+          <table class="table is-fullwidth is-responsive">
+            <thead>
+              <tr>
+                <th>Question number</th>
+                <th>Correct answer</th>
+                <th>Score</th>
+                <th>Time</th>
+                <th>Penalty</th>
+              </tr>
+            </thead>
+            <tbody id="answers-list"></tbody>
+          </table>
+        </div>
+      </section>
+      <section class="box">
+        <p class="title is-4">Leaderboard</p>
+        <p class="subtitle is-6">Top 5 contestans' results</p>
+        <div class="container">
+          <table class="table is-fullwidth is-responsive">
+            <thead>
+              <tr>
+                <th>User</th>
+                <th>Score</th>
+                <th>Time</th>
+                <th>Penalty</th>
+              </tr>
+            </thead>
+            <tbody id="leaderboard-list"></tbody>
+          </table>
+        </div>
+      </section>
+      <section class="box">
+        <p class="title is-4">Average times</p>
+        <p class="subtitle is-6">How much time do contestants spend on each question, on average?</p>
+        <div class="container">
+          <table class="table is-fullwidth is-responsive">
+            <thead>
+              <tr>
+                <th>Question number</th>
+                <th>Time</th>
+              </tr>
+            </thead>
+            <tbody id="average-times-list"></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+    <script type="module" src="js/stats_template.js"></script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "target": "es2016",
+        "sourceMap": true,
+        "lib": [
+            "dom",
+            "es2016"
+        ],
+        "watch": false,
+        "listFiles": false,
+        "outDir": "src/public/js",
+    },
+    "references": [
+        { "path": "../lib/" }
+    ],
+    "include": ["src/ts/**/*"]
+}

@@ -1,0 +1,4 @@
+func main() {
+    var f = func(x int) int { return x; };
+    print(f); // error:3:11: func value not called
+}

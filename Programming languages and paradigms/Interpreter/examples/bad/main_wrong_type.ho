@@ -1,0 +1,1 @@
+func main(argc int, argv string) {} // error: func main must have no arguments and no return values

@@ -1,0 +1,7 @@
+func main() {
+    print(f()); 
+}
+
+func f() int { // error:5:14: missing return at end of function
+
+}

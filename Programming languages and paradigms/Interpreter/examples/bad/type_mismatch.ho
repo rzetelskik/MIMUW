@@ -1,0 +1,3 @@
+func main() {
+    var x int = "abc"; // error:2:17: cannot use type string as type int
+}

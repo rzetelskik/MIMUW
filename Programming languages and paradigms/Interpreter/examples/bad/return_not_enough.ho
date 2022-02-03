@@ -1,0 +1,7 @@
+func main() {
+    print(f());
+}
+
+func f() int {
+    return; // error:6:5: not enough arguments to return
+}

@@ -1,0 +1,51 @@
+// 07 Passing by value (+ pointers)
+
+// Expected output:
+// 10 11
+// 1 1
+// 12
+// 1
+// 0
+
+func main() {
+    var x, y int = 10, 10;
+    learnPassing1(x, &y); // & takes the address of the variable
+    print(x, " ", y, "\n");
+
+    learnPassing2(&x, &y);
+    print(x, " ", y, "\n");
+
+    print(*learnLocalReturn(), "\n");
+
+    *learnExprAssignment(x) = 12;
+    print(x, "\n");
+
+    var z *int = learnLocalVarPtrReturn();
+    print(*z, "\n");
+}
+
+func learnPassing1(x int, y *int) {
+    x = x + 1;
+    *y = *y + 1; // * dereferences the pointer
+}
+
+func learnPassing2(x, y *int) {
+    *x = 1;
+    *y = 1;
+}
+
+func learnLocalReturn() *int {
+    var x int = 12;
+    return &x;
+}
+
+func learnExprAssignment(x int) *int {
+    var p *int = nil;
+    p = &x;
+    return p;
+}
+
+func learnLocalVarPtrReturn() *int {
+    var x int = 0;
+    return &x;
+}

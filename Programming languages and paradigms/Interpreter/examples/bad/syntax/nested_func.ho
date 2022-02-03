@@ -1,0 +1,6 @@
+func main() {
+    // Only function literals can be declared inside a function definition.
+    var f = func() int { return 1; };
+
+    func invalid() {}; // error: syntax error at line 5, column 10 before `invalid'
+}

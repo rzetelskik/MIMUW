@@ -1,0 +1,4 @@
+func main() {
+    var x int;
+    var p = *x; // error:3:13: invalid indirect (type int)
+}

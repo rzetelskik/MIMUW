@@ -1,0 +1,4 @@
+func main() {
+    var p *int = nil;
+    var x int = *p; // error:3:17: nil dereference
+}

@@ -1,0 +1,34 @@
+// 11 Functions returning any value
+// 13 Nested functions with static binding
+// 17 Higher-order functions, anonymous functions, closures
+
+// Expected output:
+// 3
+// 3
+// 3
+// 0
+
+func main() { 
+    // A function literal represents an anonymous function.
+    // Assign a function literal to a variable.
+    var f = func(x, y int) int { return x + y; };
+    print(f(1,2), "\n");
+
+    // Or invoke it directly.
+    var r = func(x, y int) int { return x + y; }(1,2);
+    print(r, "\n");
+
+    print(learnFuncReturn()(1,2), "\n");
+    // Function literals are closures: they may refer to variables defined in a surrounding function.
+    var x = learnClosures();
+    print(x(), "\n");
+}
+
+func learnFuncReturn() func(int,int) int {
+    return func(x, y int) int { return x + y; };
+}
+
+func learnClosures() func() int {
+    var x int;
+    return func() int { return x; };
+}

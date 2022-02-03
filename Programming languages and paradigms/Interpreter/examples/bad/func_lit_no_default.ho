@@ -1,0 +1,3 @@
+func main() {
+    var f func() int; // error:2:11: cannot create an uninitialised function
+}

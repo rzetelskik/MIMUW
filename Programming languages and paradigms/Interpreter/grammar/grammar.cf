@@ -1,0 +1,153 @@
+-- Holang's grammar is predominantly based on Go's.
+
+-- Program
+entrypoints Program ;
+
+Prog.       Program ::= [TopDef] ;
+
+FuncDefT.   TopDef ::= "func" Ident "(" [Arg] ")" Type Block ;
+
+FuncDef.    TopDef ::= "func" Ident "(" [Arg] ")" Block ;
+
+GlobalDcl.  TopDef ::= Decl ;
+
+separator nonempty TopDef "" ;
+
+Ar.         Arg ::= [Ident] Type ;
+
+separator nonempty Ident "," ;
+
+separator Arg "," ;
+
+
+-- Statements
+Blk.        Block ::= "{" [Stmt] "}" ;
+
+separator Stmt "" ;
+
+Empty.      Stmt ::= ";" ; 
+
+BStmt.      Stmt ::= Block ;
+
+DStmt.      Stmt ::= Decl ;
+
+Dcl.        Decl ::= "var" [Ident] Type ";" ;
+
+DclInit.    Decl ::= "var" [Ident] "=" [Expr] ";" ;
+
+DclInitT.   Decl ::= "var" [Ident] Type "=" [Expr] ";" ;
+
+Ass.        Stmt ::= [Expr] "=" [Expr] ";" ;
+
+For.        Stmt ::= "for" Stmt Expr ";" Stmt Block ;
+
+ForExpr.    Stmt ::= "for" Expr Block ;
+
+Incr.       Stmt ::= Ident "++" ";" ;
+
+Decr.       Stmt ::= Ident "--" ";" ;
+
+Ret.        Stmt ::= "return" Expr ";" ;
+
+VoidRet.    Stmt ::= "return" ";" ;
+
+Cond.       Stmt ::= "if" Expr Block ;
+
+CondElse.   Stmt ::= "if" Expr Block "else" Block ;
+
+Print.      Stmt ::= "print" "(" [Expr] ")" ";" ;
+
+SExp.       Stmt ::= Expr ";" ;
+
+-- Types
+Int.        Type ::= "int" ;
+
+Str.        Type ::= "string" ;
+
+Bool.       Type ::= "bool" ;
+
+FuncLitT.   Type ::= "func" "(" [Type] ")" Type ;
+
+FuncLit.    Type ::= "func" "(" [Type] ")" ;
+
+Ptr.        Type ::= "*" Type ;
+
+internal Void.  Type ::= "void" ;
+
+separator Type "," ;
+
+
+-- Expressions
+
+EApp.       Expr8 ::= Ident "(" [Expr] ")" ;
+
+ELitFunT.   Expr7 ::= "func" "(" [Arg] ")" Type Block ;
+
+ELitFun.    Expr7 ::= "func" "(" [Arg] ")" Block ;
+
+ELitFunApp. Expr6 ::= Expr7 "(" [Expr] ")" ;
+
+EVar.       Expr6 ::= Ident ;
+
+ELitInt.    Expr6 ::= Integer ;
+
+ELitTrue.   Expr6 ::= "true" ;
+
+ELitFalse.  Expr6 ::= "false" ;
+
+EString.    Expr6 ::= String ;
+
+ELitNil.    Expr6 ::= "nil" ;
+
+Ref.        Expr5 ::= "&" Expr6 ;
+
+Deref.      Expr5 ::= "*" Expr6 ;
+
+Neg.        Expr5 ::= "-" Expr6 ;
+
+Not.        Expr5 ::= "!" Expr6 ;
+
+EMul.       Expr4 ::= Expr4 MulOp Expr5 ;
+
+EAdd.       Expr3 ::= Expr3 AddOp Expr4 ;
+
+ERel.       Expr2 ::= Expr2 RelOp Expr3 ;
+
+EAnd.       Expr1 ::= Expr2 "&&" Expr1 ;
+
+EOr.        Expr ::= Expr1 "||" Expr ;
+
+coercions   Expr 8 ;
+
+separator Expr "," ;
+
+
+-- Operators
+Plus.       AddOp ::= "+" ;
+
+Minus.      AddOp ::= "-" ;
+
+Times.      MulOp ::= "*" ;
+
+Div.        MulOp ::= "/" ;
+
+Mod.        MulOp ::= "%" ;
+
+LTH.        RelOp ::= "<" ;
+
+LE.         RelOp ::= "<=" ;
+
+GTH.        RelOp ::= ">" ;
+
+GE.         RelOp ::= ">=" ;
+
+EQU.        RelOp ::= "==" ;
+
+NE.         RelOp ::= "!=" ;
+
+
+-- Comments
+comment     "//" ;
+
+comment     "/*" "*/" ;
+

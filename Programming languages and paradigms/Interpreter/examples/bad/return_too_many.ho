@@ -1,0 +1,7 @@
+func main() {
+    f();
+}
+
+func f() {
+    return 1; // error:6:5: too many arguments to return
+}

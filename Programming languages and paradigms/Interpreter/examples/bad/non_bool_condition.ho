@@ -1,0 +1,5 @@
+func main() {
+    if 1 { // error:2:8: non-bool type int used as condition
+        print("non bool condition");
+    }
+}

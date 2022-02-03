@@ -1,0 +1,4 @@
+func main() {
+    var x *int = nil;
+    var y = nil; // error:3:13: use of untyped nil
+}

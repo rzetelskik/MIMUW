@@ -1,0 +1,29 @@
+// 09 Shadowing and static binding
+
+// Expected output:
+// 0
+// 1
+// 4
+// 2
+// 0
+
+var x int = 0;
+
+func main() {
+    learnStaticBinding();
+    
+    var x, y int = 1, 1;
+    print(x, "\n");
+    
+    var f = func(x, y int) int { return x + y; };
+    print(f(2,2), "\n");
+
+    var g = func() int { return x + y; };
+    print(g(), "\n");
+
+    learnStaticBinding();
+}
+
+func learnStaticBinding() {
+    print(x, "\n");
+}

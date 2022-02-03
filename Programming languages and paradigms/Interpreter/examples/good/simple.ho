@@ -1,0 +1,60 @@
+// 01 Three types (int, bool, string)
+// 02 Literals, arithmetic, comparisons
+// 03 Variables, assignment
+// 04 print
+// 05 for, if
+
+// Expected output:
+// Hello World!
+// 8
+// true
+// false
+
+// A function definition. Main is the entrypoint for the program. Holang uses brace brackets.
+func main() {
+    var hello string; // Variables must be declared before use.
+    hello = "Hello World!";
+
+    print(hello, "\n");
+
+    var one, two string = "One", "Two"; // Declare and assign multiple variables.
+    var three = "Three"; // Infer the type, declare and assign.
+    
+    print(learnFor(1,3), "\n");
+    print(learnIf(2), "\n");
+    print(learnIfElse(3), "\n");
+}
+
+func learnFor(v int, rep int) int {
+    // For is the only loop statement in Holang. 
+    // It doesn't use parentheses, but it uses braces.
+    var i int;
+    for i = 0; i < rep; i++; {
+        v = 2*v;
+    }
+
+    // Alternate form, replacing while.
+    for false {
+        return -1;
+    }
+
+    return v;
+}
+
+func learnIf(v int) bool {
+    // Just like 'for', 'if' doesn't use parentheses, but it uses braces.
+    if v % 2 == 0 {
+        return true;
+    }
+
+    return false;
+}
+
+func learnIfElse(v int) bool {
+    // Same thing in 'if...else' form
+    if v % 2 == 0 {
+        return true;
+    } else {
+        return false;
+    }
+}

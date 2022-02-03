@@ -1,0 +1,4 @@
+// error: function main is undeclared
+func f() {
+    
+}

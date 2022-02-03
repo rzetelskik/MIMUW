@@ -1,0 +1,4 @@
+func main() {
+    var f = 5;
+    f(); // error:3:5: cannot call non-function f (type int)
+}

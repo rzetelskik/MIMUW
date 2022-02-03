@@ -1,0 +1,3 @@
+func main() {
+    var x = 1/0; // error:2:14: division by zero
+}

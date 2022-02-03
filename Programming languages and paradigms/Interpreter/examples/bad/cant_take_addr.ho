@@ -1,0 +1,4 @@
+func main() {
+    var p *int;
+    p = &5; // error:3:10: cannot take the address
+}

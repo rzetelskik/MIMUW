@@ -22,3 +22,6 @@
 [submodule "Languages and Tools for Programming I (C++)/tickets"]
 	path = Languages and Tools for Programming I (C++)/tickets
 	url = https://github.com/rzetelskik/tickets
+[submodule "Languages and tools for programming II (Microservices)/jnp2"]
+	path = Languages and tools for programming II (Microservices)/jnp2
+	url = git@github.com:rzetelskik/jnp2.git

@@ -25,3 +25,9 @@
 [submodule "Languages and tools for programming II (Microservices)/jnp2"]
 	path = Languages and tools for programming II (Microservices)/jnp2
 	url = git@github.com:rzetelskik/jnp2.git
+[submodule "Advanced Operating Systems/elf-converter"]
+	path = Advanced Operating Systems/elf-converter
+	url = git@github.com:rzetelskik/elf-converter.git
+[submodule "Advanced Operating Systems/bpf-sanitizer"]
+	path = Advanced Operating Systems/bpf-sanitizer
+	url = git@github.com:rzetelskik/bpf-sanitizer.git

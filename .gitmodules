@@ -31,3 +31,6 @@
 [submodule "Advanced Operating Systems/bpf-sanitizer"]
 	path = Advanced Operating Systems/bpf-sanitizer
 	url = git@github.com:rzetelskik/bpf-sanitizer.git
+[submodule "Advanced functional programming/haskell-palette"]
+	path = Advanced functional programming/haskell-palette
+	url = git@github.com:rzetelskik/haskell-palette.git

@@ -1,3 +1,0 @@
-int main() {
-  printInt(2*-2); return 0;
-}

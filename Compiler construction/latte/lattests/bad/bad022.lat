@@ -1,6 +1,0 @@
-// Assigning string to int variable.
-
-int main () {
- int x = "";
- return 0 ;
-}

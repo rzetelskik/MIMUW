@@ -1,4 +1,0 @@
-// Repeated argument name
-int f(int x, int x) {
-   return x;
-}

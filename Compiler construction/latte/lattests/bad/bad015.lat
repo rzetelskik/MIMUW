@@ -1,6 +1,0 @@
-// passing string to printInt().
-
-int main() {
-	printInt("foo");
-	return 0 ;
-}

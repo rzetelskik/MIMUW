@@ -1,7 +1,0 @@
-// Assigning int to string variable.
-
-int main () {
- string x;
- x = 1;
- return 0 ;
-}

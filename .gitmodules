@@ -34,3 +34,6 @@
 [submodule "Advanced functional programming/haskell-palette"]
 	path = Advanced functional programming/haskell-palette
 	url = git@github.com:rzetelskik/haskell-palette.git
+[submodule "Compiler construction/latte"]
+	path = Compiler construction/latte
+	url = git@github.com:rzetelskik/latte-compiler.git

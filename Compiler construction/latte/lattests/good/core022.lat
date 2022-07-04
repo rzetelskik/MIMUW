@@ -1,5 +1,0 @@
-int main() {
-    int x;
-    printInt(x);
-    return 0;
-}

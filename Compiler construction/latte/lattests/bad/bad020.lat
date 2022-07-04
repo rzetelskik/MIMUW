@@ -1,8 +1,0 @@
-// Compare string with boolean.
-
-int main() {
-  if ("true" == true) {
-   printString("foo");
-  }
-  return 0 ;
-}

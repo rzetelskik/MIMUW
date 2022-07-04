@@ -37,3 +37,9 @@
 [submodule "Compiler construction/latte"]
 	path = Compiler construction/latte
 	url = git@github.com:rzetelskik/latte-compiler.git
+[submodule "Distributed systems/dsassignment1"]
+	path = Distributed systems/dsassignment1
+	url = git@github.com:rzetelskik/executor-system.git
+[submodule "Distributed systems/dsassignment2"]
+	path = Distributed systems/dsassignment2
+	url = git@github.com:rzetelskik/atomic-disk-drive.git

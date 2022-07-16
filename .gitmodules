@@ -43,3 +43,6 @@
 [submodule "Distributed systems/dsassignment2"]
 	path = Distributed systems/dsassignment2
 	url = git@github.com:rzetelskik/atomic-disk-drive.git
+[submodule "Programming languages and paradigms/Interpreter"]
+	path = Programming languages and paradigms/Interpreter
+	url = git@github.com:rzetelskik/holang-interpreter.git

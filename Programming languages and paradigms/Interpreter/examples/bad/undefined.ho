@@ -1,3 +1,0 @@
-func main() {
-    print(x, "\n"); // error:2:11: undefined: x
-}

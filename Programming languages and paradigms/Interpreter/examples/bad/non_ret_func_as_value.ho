@@ -1,3 +1,0 @@
-func main() {
-    var x = func() {}(); // error:2:5: non-return func application used as value
-}

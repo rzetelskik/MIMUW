@@ -1,3 +1,0 @@
-func main() {
-    var x, y, z = 1; // error:2:5: assignment mismatch
-}

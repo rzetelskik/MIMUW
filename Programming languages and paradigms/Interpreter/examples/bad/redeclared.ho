@@ -1,4 +1,0 @@
-func main() {
-    var x = "first";
-    var x = "second"; // error:3:13: x redeclared in this block
-}

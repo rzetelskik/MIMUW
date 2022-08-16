@@ -46,3 +46,6 @@
 [submodule "Programming languages and paradigms/Interpreter"]
 	path = Programming languages and paradigms/Interpreter
 	url = git@github.com:rzetelskik/holang-interpreter.git
+[submodule "Practical distributed systems/Allezon Analytics Platform"]
+	path = Practical distributed systems/Allezon Analytics Platform
+	url = git@github.com:rzetelskik/allezon-analytics.git

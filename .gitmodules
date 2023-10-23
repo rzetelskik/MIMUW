@@ -49,3 +49,6 @@
 [submodule "Practical distributed systems/Allezon Analytics Platform"]
 	path = Practical distributed systems/Allezon Analytics Platform
 	url = git@github.com:rzetelskik/allezon-analytics.git
+[submodule "Logics for computer scientists/fo-prover"]
+	path = Logics for computer scientists/fo-prover
+	url = git@github.com:rzetelskik/fo-prover.git
